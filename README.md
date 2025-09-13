@@ -14,8 +14,26 @@ A flexible and interactive command-line utility for generating strong, customiza
 
 ## Requirements
 
-- Python 3.x
+- Python 3.x (if you don't have it please install it using this link [https://www.python.org/downloads/](https://www.python.org/downloads/) and select the latest stable version for your operating system)
 - `words_alpha.txt` (included in the repository for word-based passwords)
+
+## Why Strong Passwords Matter
+
+Using strong, unique passwords is essential to protect your accounts from hackers and cybercriminals. Weak or reused passwords are vulnerable to attacks like brute force and credential stuffing, putting your data and identity at risk.
+
+- **Longer passwords are stronger:** Using more characters makes passwords much harder to crack.
+- **Randomness matters:** A mix of words, numbers, and symbols increases security.
+- **Unique passwords for every account:** Don’t reuse passwords across sites.
+
+For a simple explanation and tips, see this guide from the [Cybersecurity and Infrastructure Security Agency (CISA)](https://www.cisa.gov/secure-our-world/use-strong-passwords) ([watch the short video](https://www.youtube.com/watch?v=U0nQe8cQ9n8)).
+
+**_Why these defaults?_**
+- **Alphanumeric passwords** combine words, numbers, and symbols for complexity.
+- **Word-based passphrases** use at least 4 random words for memorability and strength.
+- **Numeric codes** require 8+ digits to defend against guessing.
+- **Random ASCII passwords** defaults to 16 characters for high entropy.
+
+These choices are based on security best practices and recommendations from organizations like CISA and NIST.
 
 ## Quick Start (Recommended for Most Users)
 
@@ -51,7 +69,7 @@ python secure_pwgen.py
 
 ```
 Welcome to the Secure Password Generator!
-To Begin, please select the type of password you would like using a num-pad/num-row on your keyboard.
+To begin, please select the type of password you would like using a num-pad/num-row on your keyboard.
 Alphanumeric Password: 1
 Alphabetic Password: 2
 Numeric Password: 3
@@ -63,9 +81,12 @@ This password will contain words, numbers, and punctuation.
 
 ## Latest Changes
 
-- Removed default parameters from word-only, numeric, and ASCII password generation functions.
-- Removed default parameter references from docstrings.
-- Removed unnecessary comment near importing modules area.
+- Improved menu and input prompts for a clearer user experience.
+- User input for password type is now validated and more robust.
+- Minimum numeric password length increased to 8 digits.
+- Default random password length increased to 16 characters.
+- Main script flow is more modular and easier to follow.
+- README Quick Start updated for clarity and simplicity.
 
 ## License
 
