@@ -1,0 +1,19 @@
+name: Run Secure Password Generator
+
+on: [push, pull_request]
+
+jobs:
+  run-script:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - name: Install dependencies
+        run: |
+          pip install -U pip
+      - name: Check script runs (simulate user)
+        run: |
+          echo "1" | python secure_pwgen.py
