@@ -1,7 +1,24 @@
 # Changelog
 
-## [0.1.3] - 2025-09-01
+## [0.2.0] - 2025-09-13
+### Added
+- `print_password_types()` function to display the menu (improves code clarity and modularity).
+- `get_pw_type()` function to robustly handle and validate user selection of password type.
+- `pw_start()` function to centralize the logic for choosing which password generator to call, streamlining main script flow.
+- A **Why Strong Passwords Matter** section explaining the importance of strong, unique passwords..
+- A subsection under Requirements with a direct link and instructions for downloading Python 3.x.
 
+### Updated
+- Menu display and password selection logic now use separate functions for better readability and reusability.
+- Minimum numeric password length increased from 6 to 8 digits (default remains 8).
+- Default random password length increased from 12 to 16 characters (minimum remains 12).
+
+### Removed
+- The while loop for password types in main (now handled inside `get_pw_type()`).
+- Redundant information in the password type selection function.
+
+
+## [0.1.3] - 2025-09-01
 ### Updated
 - README now recommends downloading releases for most users.
 - Clarified cloning instructions for advanced users.
