@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.3.0] - 2025-11-24
+### Updated
+- Updated create_num_password to use secrets.randbelow instead of random.random and now outputs a string instead of an integer.
+- Updated create_word_password to capitalize the first letter of each word in the password.
+- Updated create_alphanumeric_password to capitalize the first letter of each word in the password.
+
+
 ## [0.2.0] - 2025-09-13
 ### Added
 - `print_password_types()` function to display the menu (improves code clarity and modularity).
