@@ -81,12 +81,8 @@ This password will contain words, numbers, and punctuation.
 
 ## Latest Changes
 
-- Improved menu and input prompts for a clearer user experience.
-- User input for password type is now validated and more robust.
-- Minimum numeric password length increased to 8 digits.
-- Default random password length increased to 16 characters.
-- Main script flow is more modular and easier to follow.
-- README Quick Start updated for clarity and simplicity.
+- Passcode generation function now uses `secrets` module for cryptographic randomization.
+- Alphanumeric and Alphabetic passwords now capitalize the first letter of each word.
 
 ## License
 
