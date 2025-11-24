@@ -117,14 +117,14 @@ def create_alphanumeric_password(words):  # 1 (Default Password) - This is the s
     """
     two_words = ""  # stores the two random words
     for i in range(2):  # add two random words
-        two_words += secrets.choice(words)
+        word = secrets.choice(words)
+        two_words += word.capitalize()
     # Now numbers
     passcode = create_num_password(4)  # calls the create_number_password function to create 4 digit passcode
     punc_list = string.punctuation
     punc_mark = secrets.choice(punc_list)  # Chooses ASCII punctuation
 
-    password = two_words + str(passcode) + punc_mark  # adds everything together
-    password = password.capitalize()  # capitalizes the first letter
+    password = two_words + passcode + punc_mark  # adds everything together
     return password  # returns alphanumeric password
 
 
@@ -137,7 +137,8 @@ def create_word_password(words, num_words):  # 2
     """
     password = ""
     for i in range(num_words):
-        password += secrets.choice(words)
+        word = secrets.choice(words)
+        password += word.capitalize()
 
     return password
 
@@ -146,16 +147,14 @@ def create_num_password(digits):  # 3
     """
     Creates a numeric password of a length entered by user. Default = 8 (sent from pw_length function, must be greater than 8 digits
     Params: digits, an integer.
-    Returns: passcode, an integer containing the passcode
+    Returns: passcode, a string containing the passcode
 
     EXCEPTION: This function is used in the alphanumeric, and it produces a 4 digit number
     """
-    seed = secrets.randbits(256)
-    random.seed(seed)
-    num = random.random()
-    tens_place = math.pow(10, digits)
-    passcode = num * tens_place
-    passcode = math.trunc(passcode)
+    passcode = ""
+    for i in range(digits):
+        passcode += str(secrets.randbelow(10))  # chooses a random digit from 0-9
+
     return passcode
 
 
