@@ -1,6 +1,6 @@
-# Secure Password Generator
+# Python Secure Password Generator
 
-A flexible and interactive command-line utility for generating strong, customizable passwords in Python.
+A flexible and interactive command-line utility made with Python for generating strong, customizable passwords in Python. This is the original Password Generator made in the Password Generator Series.
 
 ## Features
 
